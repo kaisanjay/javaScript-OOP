@@ -60,3 +60,48 @@ function Person(name) {
 
 
 
+
+/* So how do we call a constructor to create some objects? */
+
+var person1 = new Person('Bob');
+var person2 = new Person('Sarah');
+
+
+
+
+/* 
+In each case, the    new     keyword is used to tell the browser we want to create a new object instance,
+ followed by the function name with its required parameters contained in parentheses,
+  and the result is stored in a variable — very similar to how a standard function is called.
+*/
+
+
+/*
+{
+  name: 'Bob',
+  greeting: function() {
+    alert('Hi! I\'m ' + this.name + '.');
+  }
+}
+
+
+
+
+{
+  name: 'Sarah',
+  greeting: function() {
+    alert('Hi! I\'m ' + this.name + '.');
+  }
+}
+
+
+*/
+
+
+
+
+/*
+Note that when we are calling our constructor function,
+ we are defining greeting() every time, which isn't ideal.
+ To avoid this, we can define functions on the prototype instead, which we will look at later.
+*/
